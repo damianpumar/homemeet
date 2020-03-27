@@ -500,6 +500,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 	text-transform: uppercase;
 }
 
+#intro h3 {
+	color: #fff;
+	font-family: "Raleway", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
 #intro p {
 	color: #ebebeb;
 	font-weight: 700;
