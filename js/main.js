@@ -1,12 +1,12 @@
 $(document).ready(function($) {
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 100) {
-			$(".back-to-top").fadeIn("slow");
+			$(".to-top-action").fadeIn("slow");
 		} else {
-			$(".back-to-top").fadeOut("slow");
+			$(".to-top-action").fadeOut("slow");
 		}
 	});
-	$(".back-to-top").click(function() {
+	$(".to-top-action").click(function() {
 		$("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
 		return false;
 	});

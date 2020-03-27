@@ -26,6 +26,14 @@ p {
 	margin: 0 0 30px 0;
 }
 
+p img {
+	width: 2em;
+}
+
+span {
+	color: #69b6dc;
+}
+
 h1,
 h2,
 h3,
@@ -492,10 +500,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 	text-transform: uppercase;
 }
 
-#intro h1 span {
-	color: #69b6dc;
-}
-
 #intro p {
 	color: #ebebeb;
 	font-weight: 700;
@@ -552,7 +556,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #intro .play-btn:hover::after {
-	border-left: 15px solid #69b6dc;
+	border-left: 15px solid #c4302b;
 	-webkit-transform: scale(20);
 	transform: scale(20);
 }
