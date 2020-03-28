@@ -40,7 +40,11 @@
 						<li><a href="#about">About</a></li>
 						<li><a href="#schedule">Schedule</a></li>
 						<li><a href="#speakers">Speakers</a></li>
-						<li class="register"><a href="#register">Register</a></li>
+						<li class="register">
+							<button type="button" data-toggle="modal" data-target="#register">
+								Register
+							</button>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -240,54 +244,58 @@
 					</div>
 				</div>
 			</section>
-			<section id="register" class="section-with-bg wow fadeInUp">
-				<div class="container">
-					<div class="section-header">
-						<h2>Register</h2>
-						<p>Please register before attending.</p>
-					</div>
-
-					<div class="form">
-						<div id="sendmessage">Your message has been sent. Thank you!</div>
-						<div id="errormessage"></div>
-						<form action="" method="post" role="form" class="contactForm">
-							<div class="form-row">
-								<div class="form-group col-md-12">
-									<label for="fullname"
+			<div id="register" class="modal fade">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Register</h4>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form
+								class="register"
+								action="https://server.fullcoders.com/EmailMagic/email/send/LPGScT8HA4D7JJ0DvLC2"
+								method="post"
+							>
+								<div class="form-group">
+									<label for="name"
 										><b>Full name <span>*</span></b></label
 									>
 									<input
 										type="text"
-										name="fullname"
 										class="form-control"
-										id="fullname"
+										name="name"
 										placeholder="Your Name and Surname"
 										data-rule="minlen:4"
 										data-msg="Please enter at least 4 chars"
 									/>
 									<div class="validation"></div>
 								</div>
-								<div class="form-group col-md-12">
+								<div class="form-group">
 									<label for="email"
 										><b>Email <span>*</span></b></label
 									>
 									<input
-										type="email"
+										type="text"
 										class="form-control"
 										name="email"
-										id="email"
 										placeholder="Your Email"
 										data-rule="email"
 										data-msg="Please enter a valid email"
 									/>
 									<div class="validation"></div>
 								</div>
-							</div>
-							<div class="text-center"><button type="submit">Register</button></div>
-						</form>
+								<div class="text-center">
+									<button id="register-button" type="submit" class="btn">Register</button>
+								</div>
+							</form>
+						</div>
 					</div>
+					<!-- /.modal-content -->
 				</div>
-			</section>
+			</div>
 		</main>
 
 		<footer id="footer">
@@ -328,6 +336,7 @@
 		<script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
 		<script src="js/utilities.js"></script>
+		<script src="js/register.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
