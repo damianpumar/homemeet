@@ -66,6 +66,7 @@
 					target="_blank"
 				>
 					<p class="mb-4 pb-0"><span>Sunday</span>, April 4 at 2PM (UTC+2)</p>
+					<p class="mb-4 pb-0"><span>Sunday</span>, April 11 at 2PM (UTC+2)</p>
 				</a>
 				<a
 					href="https://youtu.be/C8Akt9MQ59I"
@@ -112,8 +113,12 @@
 								href="http://www.google.com/calendar/event?action=TEMPLATE&dates=20200403T130000Z%2F20200403T050000Z&text=Home%20meet%20%7C%C2%A0Stay%20at%20home&location=Youtube%20streaming&details="
 								target="_blank"
 							>
-								<p id="when">
+								<p class="when">
 									Sunday, April 4 at 2:00pm <br />
+									<i class="fa fa-clock-o"></i> Europe/Madrid (UTC+2)
+								</p>
+								<p class="when">
+									Sunday, April 11 at 2:00pm <br />
 									<i class="fa fa-clock-o"></i> Europe/Madrid (UTC+2)
 								</p>
 							</a>
@@ -129,25 +134,40 @@
 						<p>Here is our event schedule</p>
 					</div>
 
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" href="#April4" role="tab" data-toggle="tab"
+								>Sunday, April 4</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#April11" role="tab" data-toggle="tab"
+								>Sunday, April 11</a
+							>
+						</li>
+					</ul>
+
 					<h3 class="sub-heading">
-						First thing's first, We'll start the event by introducing our speakers at 2pm,
+						First thing first, We'll start the event by introducing our speakers at 2pm,
 						and we'll explain how to communicate and ask questions.
 					</h3>
 
 					<div class="tab-content row justify-content-center">
-						<div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+						<div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="April4">
 							<div class="row schedule-item">
 								<div class="col-md-2"><time>2:00 PM</time></div>
 								<div class="col-md-10">
-									<h4>Presentation our speakres</h4>
+									<h4>Presentation our speakers <span>Damián Pumar</span></h4>
 								</div>
 							</div>
 
 							<div class="row schedule-item">
 								<div class="col-md-2"><time>2:15 PM</time></div>
 								<div class="col-md-10">
-									<h4>Nicolás Milcoff</h4>
-									<p>Happy users with GraphQL</p>
+									<div class="speaker">
+										<img src="img/speakers/nicolas-milcoff.jpg" alt="Nicolás Milcoff" />
+									</div>
+									<h4>Happy users with GraphQL <span>Nicolás Milcoff</span></h4>
 									<p>
 										GraphQL is a disruptive technology in a world dominated by REST and
 										there are many contexts where it generates a great impact. In this
@@ -168,7 +188,59 @@
 							<div class="row schedule-item">
 								<div class="col-md-2"><time>3:30 PM</time></div>
 								<div class="col-md-10">
-									<h4>Miguel Angel Peñaloza</h4>
+									<div class="speaker">
+										<img
+											src="img/speakers/miguel-angel-penialoza.jpg"
+											alt="Miguel Angel Peñaloza"
+										/>
+									</div>
+									<h4>Creative graphic programming <span>Miguel Angel Peñaloza</span></h4>
+									<p>
+										Miguel will talk about how to develop interactive applications like
+										games or animations
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div role="tabpanel" class="col-lg-9 tab-pane fade" id="April11">
+							<div class="row schedule-item">
+								<div class="col-md-2"><time>2:00 PM</time></div>
+								<div class="col-md-10">
+									<h4>Presentation our speakers</h4>
+								</div>
+							</div>
+
+							<div class="row schedule-item">
+								<div class="col-md-2"><time>2:15 PM</time></div>
+								<div class="col-md-10">
+									<div class="speaker">
+										<img src="img/speakers/damian-pumar.jpg" alt="Damián Pumar" />
+									</div>
+									<h4>
+										Software architecture vs Software design
+										<span>Damián Pumar</span>
+									</h4>
+									<p>
+										There’s often confusion between software design and architecture.
+										Damián will tell us about his experience and the disadvantages of
+										overdesigning and overarchitecturing applications. Let’s break this
+										down.
+									</p>
+								</div>
+							</div>
+
+							<div class="row schedule-item">
+								<div class="col-md-2"><time>3:15 PM</time></div>
+								<div class="col-md-10">
+									<h4>Break 15' ☕ 🥐</h4>
+								</div>
+							</div>
+
+							<div class="row schedule-item">
+								<div class="col-md-2"><time>3:30 PM</time></div>
+								<div class="col-md-10">
+									<h4>Camilo Garaventa</h4>
 									<p>
 										Creative graphic programming talk oriented to interactive applications
 										such as games and animations.
@@ -260,6 +332,7 @@
 					</div>
 				</div>
 			</section>
+
 			<div id="register" class="modal fade">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">

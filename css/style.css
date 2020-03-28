@@ -798,6 +798,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #schedule .nav-tabs li {
 	display: inline-block;
 	margin-bottom: 0;
+	padding-bottom: 5px;
 }
 
 #schedule .nav-tabs a {
