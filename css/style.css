@@ -696,10 +696,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker .details {
-	background: rgba(6, 12, 34, 0.76);
+	background: rgba(6, 12, 34, 0.86);
 	position: absolute;
 	left: 0;
-	bottom: -30px;
+	max-width: 400px;
+	height: 400px;
+	top: calc(100% - 4em);
 	right: 0;
 	text-align: center;
 	padding-top: 10px;
@@ -733,7 +735,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker:hover .details {
-	bottom: 0;
+	top: 0;
 }
 
 #speakers-details {
