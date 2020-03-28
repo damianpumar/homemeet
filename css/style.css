@@ -700,8 +700,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	position: absolute;
 	left: 0;
 	max-width: 400px;
-	height: 400px;
-	top: calc(100% - 4em);
+	bottom: -30px;
 	right: 0;
 	text-align: center;
 	padding-top: 10px;
@@ -735,7 +734,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker:hover .details {
-	top: 0;
+	bottom: 0;
 }
 
 #speakers-details {

@@ -16,6 +16,15 @@ function showDeveloperMessage() {
 	console.clear();
 	console.log("Sorry, I cleared console because I wanted show you this message below");
 	console.log("Home Meet");
+	console.log("Next event 👇");
+	console.log(
+		"⏱ " +
+			$("#when")
+				.text()
+				.trim()
+				.replace("\n", "")
+				.replace(" 									 ", " ")
+	);
 }
 
 function loadAsync() {
