@@ -7,8 +7,8 @@ function showDaysInQuarantine() {
 	const oneDay = 1000 * 3600 * 24;
 	const startQuarantine = new Date(2020, 3, 13, 0, 0);
 	const now = new Date();
-	const daysDifference = (now.getTime() - startQuarantine.getTime()) / oneDay;
-	const daysInQuarantine = Math.abs(Math.trunc(daysDifference));
+	const daysDifference = (startQuarantine.getTime() - now.getTime()) / oneDay;
+	const daysInQuarantine = Math.trunc(daysDifference);
 	$("#daysInQuarantine").text(daysInQuarantine);
 }
 
