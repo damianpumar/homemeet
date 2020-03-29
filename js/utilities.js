@@ -5,10 +5,10 @@ $(window).load(function() {
 
 function showDaysInQuarantine() {
 	const oneDay = 1000 * 3600 * 24;
-	const startQuarantine = new Date(2020, 3, 13, 0, 0);
-	const now = new Date();
-	const daysDifference = (startQuarantine.getTime() - now.getTime()) / oneDay;
-	const daysInQuarantine = Math.trunc(daysDifference);
+	const startQuarantine = new Date(2020, 2, 13, 0, 0);
+	const today = Date.now();
+	const daysDifference = Math.abs(today - startQuarantine);
+	const daysInQuarantine = Math.floor(daysDifference / oneDay);
 	$("#daysInQuarantine").text(daysInQuarantine);
 }
 
