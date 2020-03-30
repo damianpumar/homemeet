@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
 	"use strict";
 
 	$("form.register").submit(function(e) {
@@ -78,7 +78,8 @@ jQuery(document).ready(function($) {
 			crossDomain: true,
 			data: $(this).serialize(),
 			success: function() {
-				registerButton.html("Thanks you're registered");
+				saveUserData();
+				refreshUserStatus();
 			},
 			error: function() {
 				registerButton.html("Upps! try later please");
@@ -93,3 +94,35 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 });
+
+$("#register").on("show.bs.modal", function() {
+	$(this);
+	refreshUserStatus();
+	setTimeout(function() {
+		$("#register-name").focus();
+	}, 500);
+});
+
+function saveUserData() {
+	localStorage.setItem("user-name", $("#register-name").val());
+	localStorage.setItem("user-email", $("#register-email").val());
+}
+
+function refreshUserStatus() {
+	const userName = localStorage.getItem("user-name");
+	const userEmail = localStorage.getItem("user-email");
+
+	if (userName && userEmail) {
+		const registerButton = $("#register-button");
+		registerButton.prop("disabled", true);
+		registerButton.html("Thanks you're registered");
+
+		const name = $("#register-name");
+		name.prop("disabled", true);
+		name.val(userName);
+
+		const email = $("#register-email");
+		email.prop("disabled", true);
+		email.val(userEmail);
+	}
+}

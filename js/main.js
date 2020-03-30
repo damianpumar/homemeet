@@ -140,8 +140,4 @@ $(document).ready(function($) {
 			}
 		}
 	});
-
-	$("#register").on("show.bs.modal", function(event) {
-		$(this);
-	});
 });
