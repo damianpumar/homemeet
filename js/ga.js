@@ -6,9 +6,8 @@ gtag('config', 'UA-97340590-5');
 
 function throwGAEvent(label, value) {
     gtag('event', label, {
-        'event_label': label,
-        'event_category': 'HomeMeet',
-        'value': value
+        'event_label': value,
+        'event_category': label
     });
 }
 
