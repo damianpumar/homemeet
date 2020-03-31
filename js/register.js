@@ -1,14 +1,14 @@
-$(document).ready(function($) {
+$(document).ready(function ($) {
 	"use strict";
 
-	$("form.register").submit(function(e) {
+	$("form.register").submit(function (e) {
 		e.preventDefault();
 
 		var f = $(this).find(".form-group"),
 			ferror = false,
 			emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-		f.children("input").each(function() {
+		f.children("input").each(function () {
 			var i = $(this); // current input
 			var rule = i.attr("data-rule");
 
@@ -72,18 +72,24 @@ $(document).ready(function($) {
 
 		registerButton.prop("disabled", true);
 
+		const data = $(this).serialize();
+
+		throwRegisterTemporalSubmit(data);
+
 		$.ajax({
 			url: $(this).attr("action"),
 			type: $(this).attr("method"),
 			crossDomain: true,
-			data: $(this).serialize(),
-			success: function() {
+			data: data,
+			success: function () {
+				throwRegisterSuccessSubmit();
 				saveUserData();
-				refreshUserStatus();
+				refreshUserStatus(data);
 			},
-			error: function() {
+			error: function () {
+				throwRegisterErrorSubmit(data);
 				registerButton.html("Upps! try later please");
-				registerButton.delay(2000).queue(function() {
+				registerButton.delay(2000).queue(function () {
 					registerButton.prop("disabled", false);
 					registerButton.html("Register");
 					registerButton.dequeue();
@@ -95,10 +101,10 @@ $(document).ready(function($) {
 	});
 });
 
-$("#register").on("show.bs.modal", function() {
+$("#register").on("show.bs.modal", function () {
 	$(this);
 	refreshUserStatus();
-	setTimeout(function() {
+	setTimeout(function () {
 		$("#register-name").focus();
 	}, 500);
 });
