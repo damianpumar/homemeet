@@ -72,22 +72,20 @@ $(document).ready(function ($) {
 
 		registerButton.prop("disabled", true);
 
-		const data = $(this).serialize();
-
-		throwRegisterTemporalSubmit(data);
+		throwRegisterTemporalSubmit();
 
 		$.ajax({
 			url: $(this).attr("action"),
 			type: $(this).attr("method"),
 			crossDomain: true,
-			data: data,
+			data: $(this).serialize(),
 			success: function () {
 				throwRegisterSuccessSubmit();
 				saveUserData();
-				refreshUserStatus(data);
+				refreshUserStatus();
 			},
 			error: function () {
-				throwRegisterErrorSubmit(data);
+				throwRegisterErrorSubmit();
 				registerButton.html("Upps! try later please");
 				registerButton.delay(2000).queue(function () {
 					registerButton.prop("disabled", false);

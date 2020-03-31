@@ -2,31 +2,26 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
-gtag('config', 'UA-97340590-5', {
-    'custom_map': { 'dimension1': 'form-data' }
-});
+gtag('config', 'UA-97340590-5');
 
-function throwGAEvent(label, value) {
+function throwGAEvent(label) {
     gtag('event', label, {
         'event_label': label,
         'event_category': 'HomeMeet'
     });
-    gtag('event', "form-data_dimension", {
-        "form-data": value
-    });
 }
 
 const REGISTER_SUCCESS = "[HomeMeet register_success]";
-function throwRegisterSuccessSubmit(dataForm) {
-    throwGAEvent(REGISTER_SUCCESS, dataForm);
+function throwRegisterSuccessSubmit() {
+    throwGAEvent(REGISTER_SUCCESS);
 }
 
 const REGISTER_ERROR = "[HomeMeet register_error]";
-function throwRegisterErrorSubmit(dataForm) {
-    throwGAEvent(REGISTER_ERROR, dataForm);
+function throwRegisterErrorSubmit() {
+    throwGAEvent(REGISTER_ERROR);
 }
 
 const REGISTER_TEMPORAL = "[HomeMeet register_temporal]";
-function throwRegisterTemporalSubmit(dataForm) {
-    throwGAEvent(REGISTER_TEMPORAL, dataForm);
+function throwRegisterTemporalSubmit() {
+    throwGAEvent(REGISTER_TEMPORAL);
 }
