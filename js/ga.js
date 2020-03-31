@@ -2,12 +2,17 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 
-gtag('config', 'UA-97340590-5');
+gtag('config', 'UA-97340590-5', {
+    'custom_map': { 'dimension1': 'form-data' }
+});
 
 function throwGAEvent(label, value) {
     gtag('event', label, {
-        'event_label': value,
-        'event_category': label
+        'event_label': label,
+        'event_category': 'HomeMeet'
+    });
+    gtag('event', "form-data_dimension", {
+        "form-data": value
     });
 }
 
